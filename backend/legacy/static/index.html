@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prism Test Server</title>
+    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="ui.fancytree.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/jquery.fancytree@2.27/dist/jquery.fancytree-all-deps.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
+    <script src="jquery.fancytree.glyph.js"></script>
+    <script src="difflib.js"></script>
+    <script src="diffview.js"></script>
+    <script src="hotkeys.min.js"></script>
+    <link rel="stylesheet" href="diffview.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="flash">
+    ERROR
+</div>
+<div class="main-container">
+    <div class="menu">
+        <div class="menu-title">Directory</div>
+        <div class="menu-options-container">
+            <div class="menu-option"><label>App Name</label><input id="app-name"></div>
+            <div class="menu-option"><label>Client ID</label><input id="client-id"></div>
+            <div class="menu-option"><label>Client Secret</label><input id="client-secret"></div>
+            <button id="cred-save">Save</button>
+        </div>
+    </div>
+    <div class="content-container">
+        <table id="tree">
+      <colgroup>
+        <col width="80px" />
+        <col width="60px" />
+        <col width="40px" />
+        <col width="400px" />
+        <col width="400px" />
+        <col width="160px" />
+        <col width="80px" />
+        <col width="250px" />
+      </colgroup>
+      <thead>
+        <!--
+        <tr>
+            <th>selected</th>
+            <th>method</th>
+            <th>Sn.</th>
+            <th>name</th>
+            <th>path</th>
+            <th>data</th>
+            <th>status</th>
+            <th>content</th>
+        </tr>
+        -->
+      </thead>
+      <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+      </tbody></table>
+    </div>
+    <div class="menu">
+        <div class="menu-title">Test Result</div>
+        <div class="menu-options-container">
+            <div class="menu-option"></div>
+        </div>
+    </div>
+    <div class="content-container">
+        <table id="test-tree">
+      <colgroup>
+          <col width="40px" />
+          <col width="600px" />
+          <col width="400px" />
+      </colgroup>
+      <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+      </tbody></table>
+    </div>
+</div>
+<div id="compare-panel">
+    <div id="compare">
+        <div id="compare-close">
+            X
+        </div>
+        <div id="compare-content"></div>
+    </div>
+</div>
+<div id="name-panel">
+    <div id="name-container">
+        <div id="name-close">
+            X
+        </div>
+        <input id="name-input">
+        <button id="name-button"></button>
+        </input>
+    </div>
+</div>
+<div id="data-panel">
+    <div id="data-container">
+        <div id="data-close">
+            X
+        </div>
+        <div id="data-heading"></div>
+        <div id="data-content">
+            <pre>
+                <code id="data-code">
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
