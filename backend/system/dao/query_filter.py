@@ -13,7 +13,8 @@ class QueryOperator(Enum):
     lt = 'lt'
     gt = 'gt'
     like = 'like'
-    likep = 'likep'
+    startswith = 'startswith'
+    endswith = 'endswith'
 
 
 class QueryFilter(object):
@@ -47,9 +48,11 @@ class NativeFilter(QueryFilter):
         elif operator == QueryOperator.le:
             _query = query.filter(col <= val)
         elif operator == QueryOperator.like:
-            _query = query.filter(col.like('{}%'.format(val)))
-        elif operator == QueryOperator.likep:
             _query = query.filter(col.like(val))
+        elif operator == QueryOperator.startswith:
+            _query = query.filter(col.like('{}%'.format(val)))
+        elif operator == QueryOperator.endswith:
+            _query = query.filter(col.like('%{}'.format(val)))
         return _query
 
     def _split_key(self, key: str) -> Tuple[str, QueryOperator]:

@@ -1,3 +1,0 @@
-DB_MODE = 'DB'
-FILE_MODE = 'FILE'
-

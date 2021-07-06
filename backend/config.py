@@ -39,23 +39,13 @@ class BaseConfig(object):
     DB_CONFIG: DatabaseConfig
 
 
-# class DefaultConfig(BaseConfig):
-#     DB_CONFIG = DatabaseConfig(
-#         dialect='postgres',
-#         host='localhost',
-#         port=5432,
-#         username='postgres',
-#         password='1234',
-#         db='testing_tool',
-#     )
-
 class DefaultConfig(BaseConfig):
     DB_CONFIG = DatabaseConfig(
-        dialect='mysql',
+        dialect='postgres',
         host='localhost',
-        port=3306,
-        username='root',
-        password='',
+        port=5432,
+        username='postgres',
+        password='1234',
         db='testing_tool',
     )
 

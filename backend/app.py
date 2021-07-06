@@ -11,8 +11,6 @@ app = FastAPI()
 
 app.include_router(router=api_router, prefix='/api')
 
-# app.mount(path='/', app=WSGIMiddleware(FancyTreeWsgiApp({'root_path': './'})))
-
 from backend.system.db import Base
 metadata = Base.metadata
 
